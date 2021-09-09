@@ -1,0 +1,1540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-ContentWithoutHeader</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>ContentWithoutHeader</command:noun>
+      <maml:description>
+        <maml:para>Gets the content of a Markdown file without the YAML frontmatter.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet gets the content of a Markdown file without the YAML frontmatter. This is useful when updating the metadata of the file or for passing Markdown text to another command for processing.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ContentWithoutHeader</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Object</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Object</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>See the source code for `Update-Metadata` for another example.</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1 - Render the Markdown file as HTML ---------</maml:title>
+        <dev:code>Get-ContentWithoutHeader .\Update-Metadata.md |
+    ConvertFrom-Markdown |
+    Select-Object -ExpandProperty Html</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-HtmlMetaTags</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>HtmlMetaTags</command:noun>
+      <maml:description>
+        <maml:para>Gets all of the HTML `&lt;meta&gt;` elements of a web page.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets all of the HTML `&lt;meta&gt;` elements of a web page. This is use to see the Docs metadata in the published article.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-HtmlMetaTags</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>ArticleUrl</maml:name>
+          <maml:description>
+            <maml:para>The URL to the Docs article you want to inspect.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Uri</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Uri</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>ShowRequiredMetadata</maml:name>
+          <maml:description>
+            <maml:para>Filters the output to show only the metadata require by the OPS publishing system.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>ArticleUrl</maml:name>
+        <maml:description>
+          <maml:para>The URL to the Docs article you want to inspect.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Uri</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Uri</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>ShowRequiredMetadata</maml:name>
+        <maml:description>
+          <maml:para>Filters the output to show only the metadata require by the OPS publishing system.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------------- Example 1 - Get the `ms.*` meta tags -------------</maml:title>
+        <dev:code>$url = 'https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows'
+Get-HtmlMetaTags $url | Select-Object ms.*
+
+ms.author     : sewhee
+ms.date       : 08/02/2021
+ms.devlang    : powershell
+ms.prod       : powershell
+ms.technology : powershell-conceptual
+ms.tgt_pltfr  : windows, macos, linux
+ms.topic      : conceptual</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>---------- Example 2 - Show only the require metadata ----------</maml:title>
+        <dev:code>$url = 'https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows'
+Get-HtmlMetaTags $url -ShowRequiredMetadata
+
+title         :
+og:title      : Installing PowerShell on Windows - PowerShell
+description   : Information about installing PowerShell on Windows
+ms.manager    :
+ms.author     : sewhee
+author        : sdwheeler
+ms.service    :
+ms.date       : 08/02/2021
+ms.topic      : conceptual
+ms.subservice :
+ms.prod       : powershell
+ms.technology : powershell-conceptual
+ms.custom     :
+ROBOTS        : INDEX, FOLLOW</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-LocaleFreshness</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>LocaleFreshness</command:noun>
+      <maml:description>
+        <maml:para>Gets the `ms.date` metadata information of a Docs article for every locale.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the `ms.date` metadata information of a Docs article for every locale. The output includes the locale information and the translation method. This is useful to see whether or not the localization process has picked up the latest changes made to the English version of the article.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-LocaleFreshness</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:description>
+            <maml:para>The URL to the article being inspected. The URL must contain a locale.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Uri</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Uri</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:description>
+          <maml:para>The URL to the article being inspected. The URL must contain a locale.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Uri</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Uri</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------ Example 1 - Get the freshness date for an article ------</maml:title>
+        <dev:code>$url = 'https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows'
+Get-LocaleFreshness $url
+
+locale ms.contentlocale ms.translationtype ms.date
+------ ---------------- ------------------ -------
+de-de  de-DE            HT                 04/27/2021
+es-es  es-ES            HT                 04/27/2021
+fr-fr  fr-FR            HT                 04/27/2021
+ja-jp  ja-JP            HT                 04/27/2021
+ko-kr  ko-KR            HT                 04/27/2021
+pt-br  pt-BR            HT                 04/27/2021
+ru-ru  ru-RU            HT                 04/27/2021
+zh-cn  zh-CN            HT                 04/27/2021
+en-us                                      08/02/2021
+cs-cz  cs-CZ            MT                 08/02/2021
+hu-hu  hu-HU            MT                 08/02/2021
+it-it  it-IT            MT                 08/02/2021
+nl-nl  nl-NL            MT                 08/02/2021
+pl-pl  pl-PL            MT                 08/02/2021
+pt-pt  pt-PT            MT                 08/02/2021
+sv-se  sv-SE            MT                 08/02/2021
+tr-tr  tr-TR            MT                 08/02/2021
+zh-tw  zh-TW            MT                 08/02/2021</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-MDLinks</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>MDLinks</command:noun>
+      <maml:description>
+        <maml:para>Gets a list of the hyperlinks in the Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet returns a PSObject containing the Markdown link parsed into it's parts:</maml:para>
+      <maml:para>- label - contains the text in the square brackets (`[]`) of the link - file - contains the HTTP file path without the anchor or query strings - anchor - contains the anchor string on the link - query - contains the query string on the link</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-MDLinks</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file containing links. This can be a path to a folder containing Markdown files. Wildcards are permitted.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file containing links. This can be a path to a folder containing Markdown files. Wildcards are permitted.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------- Example 1 - Get a list of links in an article --------</maml:title>
+        <dev:code>Get-MDLinks .\install\Installing-PowerShell-Core-on-Windows.md
+
+link   : [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)
+label  : Universal C Runtime
+file   : https://www.microsoft.com/download/details.aspx
+anchor :
+query  : ?id=50410
+
+link   : [WMF Overview](/powershell/scripting/wmf/overview)
+label  : WMF Overview
+file   : /powershell/scripting/wmf/overview
+anchor :
+query  :
+
+link   : [ZIP install](#zip)
+label  : ZIP install
+file   :
+anchor : #zip
+query  :
+
+link   : [Command line options](/windows/desktop/Msi/command-line-options)
+label  : Command line options
+file   : /windows/desktop/Msi/command-line-options
+anchor :
+query  :
+
+link   : [prerequisites](#prerequisites)
+label  : prerequisites
+file   :
+anchor : #prerequisites
+query  :
+
+link   : [https://aka.ms/powershell-release?tag=stable](https://aka.ms/powershell-release?tag=stable)
+label  : https://aka.ms/powershell-release?tag=stable
+file   : https://aka.ms/powershell-release
+anchor :
+query  : ?tag=stable
+
+link   : [https://aka.ms/powershell-release?tag=preview](https://aka.ms/powershell-release?tag=preview)
+label  : https://aka.ms/powershell-release?tag=preview
+file   : https://aka.ms/powershell-release
+anchor :
+query  : ?tag=preview
+
+link   : [https://aka.ms/powershell-release?tag=lts](https://aka.ms/powershell-release?tag=lts)
+label  : https://aka.ms/powershell-release?tag=lts
+file   : https://aka.ms/powershell-release
+anchor :
+query  : ?tag=lts
+
+link   : [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server)
+label  : Nano Server Image Builder
+file   : /windows-server/get-started/deploy-nano-server
+anchor :
+query  :
+
+link   : [.NET Core SDK](/dotnet/core/sdk)
+label  : .NET Core SDK
+file   : /dotnet/core/sdk
+anchor :
+query  :
+
+link   : [.NET Global tool](/dotnet/core/tools/global-tools)
+label  : .NET Global tool
+file   : /dotnet/core/tools/global-tools
+anchor :
+query  :
+
+link   : [Microsoft Store](https://www.microsoft.com/store/apps/9MZ1SNWT0N5D)
+label  : Microsoft Store
+file   : https://www.microsoft.com/store/apps/9MZ1SNWT0N5D
+anchor :
+query  :
+
+link   : [Understanding how packaged desktop apps run on Windows](/windows/msix/desktop/desktop-to-uwp-behind-the-scenes)
+label  : Understanding how packaged desktop apps run on Windows
+file   : /windows/msix/desktop/desktop-to-uwp-behind-the-scenes
+anchor :
+query  :</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-Metadata</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>Metadata</command:noun>
+      <maml:description>
+        <maml:para>Get the metadata frontmatter from a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Get the metadata frontmatter from a Markdown file. By default the data is returned as a hashtable object. It can also be returned as a PSObject .</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-Metadata</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AsObject</maml:name>
+          <maml:description>
+            <maml:para>Returns the metadata as a PSObject . Unlike the hashtable, the object include the original file path as a property.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Recurse</maml:name>
+          <maml:description>
+            <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>AsObject</maml:name>
+        <maml:description>
+          <maml:para>Returns the metadata as a PSObject . Unlike the hashtable, the object include the original file path as a property.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Recurse</maml:name>
+        <maml:description>
+          <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------ Example 1 - Get the metadata header as a hashtable ------</maml:title>
+        <dev:code>Get-Metadata .\install\Installing-PowerShell-Core-on-Windows.md
+
+Name                           Value
+----                           -----
+description                    Information about installing PowerShell on Windows
+title                          Installing PowerShell on Windows
+ms.date                        08/02/2021</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------- Example 2 - Get the metadata header as an object -------</maml:title>
+        <dev:code>Get-Metadata .\install\Installing-PowerShell-Core-on-Windows.md -AsObject | Format-list
+
+description : Information about installing PowerShell on Windows
+file        : C:\Git\PS-Docs\PowerShell-Docs\reference\docs-conceptual\install\Installing-PowerShell-Core-on-Windows.md
+title       : Installing PowerShell on Windows
+ms.date     : 08/02/2021</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-YamlBlock</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Update-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>hash2yaml</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-ShortDescription</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>ShortDescription</command:noun>
+      <maml:description>
+        <maml:para>Creates Markdown source listing each of cmdlet files in the folder and their SYNOPSIS text.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet creates Markdown source listing each of cmdlet files in the folder and their SYNOPSIS text. This text is useful for updating the module Markdown file created by PlatyPS.</maml:para>
+      <maml:para>The cmdlet must be run in the folder containing the Markdown files for all the cmdlets in the module. The output can be sent to the clipboard for easy pasting into the `module.md` file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ShortDescription</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>There are no parameter for this cmdlet.</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>---- Example 1 - Get the short descriptions for all cmdlets ----</maml:title>
+        <dev:code>Get-ShortDescription | Set-Clipboard</dev:code>
+        <dev:remarks>
+          <maml:para>The output is copied to the Clipboard for easy pasting into the `module.md` file.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-Syntax</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>Syntax</command:noun>
+      <maml:description>
+        <maml:para>Displays the syntax of a cmdlet.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet is similar to the output you get from `Get-Command -Syntax`. By default, the syntax information is returned as an object. You can also return it as formatted Markdown source that can be easily pasted into a cmdlet Markdown file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-Syntax</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>CmdletName</maml:name>
+          <maml:description>
+            <maml:para>The name of the cmdlet for which you want syntax information.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Markdown</maml:name>
+          <maml:description>
+            <maml:para>Outputs the syntax information as formatted Markdown. The Markdown is suitable for updating the syntax blocks in a `cmdlet.md` file.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>CmdletName</maml:name>
+        <maml:description>
+          <maml:para>The name of the cmdlet for which you want syntax information.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Markdown</maml:name>
+        <maml:description>
+          <maml:para>Outputs the syntax information as formatted Markdown. The Markdown is suitable for updating the syntax blocks in a `cmdlet.md` file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--- Example 1 - Get the syntax of a command as Markdown text ---</maml:title>
+        <dev:code>Get-Syntax Get-Command -Markdown</dev:code>
+        <dev:remarks>
+          <maml:para>~~~markdown</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>--------------------- CmdletSet (Default) ---------------------</maml:title>
+        <dev:code>Get-Command [[-ArgumentList] &lt;Object[]&gt;] [-Verb &lt;string[]&gt;] [-Noun &lt;string[]&gt;]
+ [-Module &lt;string[]&gt;] [-FullyQualifiedModule &lt;ModuleSpecification[]&gt;] [-TotalCount &lt;int&gt;]
+ [-Syntax] [-ShowCommandInfo] [-All] [-ListImported] [-ParameterName &lt;string[]&gt;]
+ [-ParameterType &lt;PSTypeName[]&gt;]</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------------------------ AllCommandSet ------------------------</maml:title>
+        <dev:code>Get-Command [[-Name] &lt;string[]&gt;] [[-ArgumentList] &lt;Object[]&gt;] [-Module &lt;string[]&gt;]
+ [-FullyQualifiedModule &lt;ModuleSpecification[]&gt;] [-CommandType &lt;CommandTypes&gt;] [-TotalCount &lt;int&gt;]
+ [-Syntax] [-ShowCommandInfo] [-All] [-ListImported] [-ParameterName &lt;string[]&gt;]
+ [-ParameterType &lt;PSTypeName[]&gt;] [-UseFuzzyMatching] [-UseAbbreviationExpansion]</dev:code>
+        <dev:remarks>
+          <maml:para>~~~</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----- Example 2 - Get the syntax of a command as an object -----</maml:title>
+        <dev:code>Get-Syntax Get-Command | Format-Table -Wrap
+
+Cmdlet      ParameterSetName IsDefault Parameters
+------      ---------------- --------- ----------
+Get-Command CmdletSet             True [[-ArgumentList] &lt;Object[]&gt;] [-Verb &lt;string[]&gt;] [-Noun &lt;string[]&gt;] [-Module
+                                       &lt;string[]&gt;] [-FullyQualifiedModule &lt;ModuleSpecification[]&gt;] [-TotalCount &lt;int&gt;]
+                                       [-Syntax] [-ShowCommandInfo] [-All] [-ListImported] [-ParameterName &lt;string[]&gt;]
+                                       [-ParameterType &lt;PSTypeName[]&gt;] [&lt;CommonParameters&gt;]
+Get-Command AllCommandSet        False [[-Name] &lt;string[]&gt;] [[-ArgumentList] &lt;Object[]&gt;] [-Module &lt;string[]&gt;]
+                                       [-FullyQualifiedModule &lt;ModuleSpecification[]&gt;] [-CommandType &lt;CommandTypes&gt;]
+                                       [-TotalCount &lt;int&gt;] [-Syntax] [-ShowCommandInfo] [-All] [-ListImported]
+                                       [-ParameterName &lt;string[]&gt;] [-ParameterType &lt;PSTypeName[]&gt;] [-UseFuzzyMatching]
+                                       [-UseAbbreviationExpansion] [&lt;CommonParameters&gt;]</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-YamlBlock</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>YamlBlock</command:noun>
+      <maml:description>
+        <maml:para>Gets the YAML frontmatter from a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet returns the YAML frontmatter from a Markdown file. The output is returned as plain text and does not include the `---` document separator lines.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-YamlBlock</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to a single Markdown file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Object</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to a single Markdown file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Object</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>Get-YamlBlock .\install\Installing-PowerShell-Core-on-Windows.md
+
+title: Installing PowerShell on Windows
+description: Information about installing PowerShell on Windows
+ms.date: 08/02/2021</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>hash2yaml</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-LinkRefs</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>LinkRefs</command:noun>
+      <maml:description>
+        <maml:para>Creates Markdown link references for all links in a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet creates Markdown link references for all links in a Markdown file. These references are usually found at the end of the Markdown file. The output can be pasted in the the Markdown file. You then must edit the hyperlinks in the file to transform them into the reference-style syntax.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-LinkRefs</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to a Markdown file containing links. Wildcards are supported but the output from all files combined.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to a Markdown file containing links. Wildcards are supported but the output from all files combined.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------ Example 1 - Create link references for an article ------</maml:title>
+        <dev:code>Get-MDLinks .\install\Installing-PowerShell-Core-on-Windows.md
+
+[Universal C Runtime]: https://www.microsoft.com/download/details.aspx?id=50410
+[WMF Overview]: /powershell/scripting/wmf/overview
+[ZIP install]: #zip
+[Command line options]: /windows/desktop/Msi/command-line-options
+[prerequisites]: #prerequisites
+[https://aka.ms/powershell-release?tag=stable]: https://aka.ms/powershell-release?tag=stable
+[https://aka.ms/powershell-release?tag=preview]: https://aka.ms/powershell-release?tag=preview
+[https://aka.ms/powershell-release?tag=lts]: https://aka.ms/powershell-release?tag=lts
+[Nano Server Image Builder]: /windows-server/get-started/deploy-nano-server
+[.NET Core SDK]: /dotnet/core/sdk
+[.NET Global tool]: /dotnet/core/tools/global-tools
+[Microsoft Store]: https://www.microsoft.com/store/apps/9MZ1SNWT0N5D
+[Understanding how packaged desktop apps run on Windows]: /windows/msix/desktop/desktop-to-uwp-behind-the-scenes</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Remove-Metadata</command:name>
+      <command:verb>Remove</command:verb>
+      <command:noun>Metadata</command:noun>
+      <maml:description>
+        <maml:para>Removes metadata key-value pairs from the YAML frontmatter of a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Removes metadata key-value pairs from the YAML frontmatter of a Markdown file. List the keys names you want to remove from the frontmatter. This is useful for removing obsolete metadata values.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Remove-Metadata</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>KeyName</maml:name>
+          <maml:description>
+            <maml:para>The name of the metadata key to be removed. This can be a comma-delimited list of names.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Recurse</maml:name>
+          <maml:description>
+            <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>KeyName</maml:name>
+        <maml:description>
+          <maml:para>The name of the metadata key to be removed. This can be a comma-delimited list of names.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Recurse</maml:name>
+        <maml:description>
+          <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1 - Remove obsolete metadata values ---------</maml:title>
+        <dev:code>Get-Metadata .\install\Installing-PowerShell-Core-on-Windows.md
+
+Name                           Value
+----                           -----
+description                    Information about installing PowerShell on Windows
+keywords                       powershell, cmdlets
+title                          Installing PowerShell on Windows
+ms.date                        08/02/2021
+ms.assetid                     3a0fc6a8-dfe3-4852-bda4-2ea4a7a1917f
+
+Remove-Metadata -KeyName keywords,'ms.assetid'
+Get-Metadata .\install\Installing-PowerShell-Core-on-Windows.md
+
+Name                           Value
+----                           -----
+description                    Information about installing PowerShell on Windows
+title                          Installing PowerShell on Windows
+ms.date                        08/02/2021</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Update-YamlBlock</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-Metadata</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>Metadata</command:noun>
+      <maml:description>
+        <maml:para>Overwrites the metadata frontmatter in a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Overwrites the metadata frontmatter in a Markdown file. The existing frontmatter is replaced with the values in the NewMetadata hashtable.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-Metadata</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>NewMetadata</maml:name>
+          <maml:description>
+            <maml:para>This is a hashtable of key-value pairs to be written to the Markdown file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Collections.Hashtable</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.Hashtable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Recurse</maml:name>
+          <maml:description>
+            <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>NewMetadata</maml:name>
+        <maml:description>
+          <maml:para>This is a hashtable of key-value pairs to be written to the Markdown file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Collections.Hashtable</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.Hashtable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Recurse</maml:name>
+        <maml:description>
+          <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-- Example 1 - Replace the existing metadata with new values --</maml:title>
+        <dev:code>$newvalues = @{
+    'ms.date' = Get-Date -Format 'MM/dd/yyyy'
+    test='foo'
+}
+Update-Metadata .\docs\*.md -NewMetadata $newvalues</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Update-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Sort-Parameters</command:name>
+      <command:verb>Sort</command:verb>
+      <command:noun>Parameters</command:noun>
+      <maml:description>
+        <maml:para>Sorts the H3 parameter blocks of a cmdlet Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The PowerShell-Docs style guide recommends that the H3 parameter blocks of a cmdlet Markdown file be sorted alphabetically with the Confirm and WhatIf parameters at the end of the list. However, much of the existing reference content was created before this recommendation. Therefore, not all cmdlet files are ordered this way.</maml:para>
+      <maml:para>This cmdlet allows you to easily reorder the parameters.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Sort-Parameters</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1 - Sort the parameter blocks of all Markdown files in a folder</maml:title>
+        <dev:code>Sort-Parameters .\7.1\Microsoft.PowerShell.Utility\*-*.md</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Update-Metadata</command:name>
+      <command:verb>Update</command:verb>
+      <command:noun>Metadata</command:noun>
+      <maml:description>
+        <maml:para>Updates or adds metadata to a Markdown file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Updates or adds metadata to a Markdown file. The existing keys in the frontmatter are update with the new values. New keys are added to the frontmatter.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Update-Metadata</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>NewMetadata</maml:name>
+          <maml:description>
+            <maml:para>This is a hashtable of key-value pairs to be written to the Markdown file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">System.Collections.Hashtable</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.Hashtable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Recurse</maml:name>
+          <maml:description>
+            <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>NewMetadata</maml:name>
+        <maml:description>
+          <maml:para>This is a hashtable of key-value pairs to be written to the Markdown file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Collections.Hashtable</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.Hashtable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="true" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path to the Markdown file. This can be a path to a folder containing Markdown files. Wildcards are allowed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Recurse</maml:name>
+        <maml:description>
+          <maml:para>Cause the cmdlet to recursively search for Markdown files in the matching Path and all subfolders.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">System.Management.Automation.SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1 - Update the **ms.date** metadata for all Markdown files</maml:title>
+        <dev:code>Update-Metadata *.md -NewMetadata @{'ms.date' = Get-Date -Format 'MM/dd/yyyy' }</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-Metadata</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>
