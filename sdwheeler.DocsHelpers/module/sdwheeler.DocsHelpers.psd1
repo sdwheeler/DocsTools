@@ -4,7 +4,7 @@
 
 @{
     RootModule        = '.\sdwheeler.DocsHelpers.psm1'
-    ModuleVersion     = '1.0.0'
+    ModuleVersion     = '1.0.1'
     GUID              = '87d8c619-ccd7-43a6-8687-dacc24357910'
     Author            = 'Sean D. Wheeler <sewhee@microsoft.com>'
     CompanyName       = 'Microsoft'
@@ -30,6 +30,7 @@ docs.microsoft.com articles.
         'Remove-Metadata',
         'Set-Metadata',
         'Sort-Parameters',
+        'Test-YamlTOC',
         'Update-Metadata'
     )
     CmdletsToExport   = ''

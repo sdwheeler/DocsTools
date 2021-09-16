@@ -4,7 +4,7 @@ Help Version: 1.0.0
 Locale: en-US
 Module Guid: 87d8c619-ccd7-43a6-8687-dacc24357910
 Module Name: sdwheeler.DocsHelpers
-ms.date: 09/09/2021
+ms.date: 09/16/2021
 ---
 
 # sdwheeler.DocsHelpers Module
@@ -18,7 +18,7 @@ articles.
 Gets the content of a Markdown file without the YAML frontmatter.
 
 ### [Get-HtmlMetaTags](Get-HtmlMetaTags.md)
-Gets all of the HTML `<meta>` elements of a web page.
+Gets all the HTML `<meta>` elements of a web page.
 
 ### [Get-LocaleFreshness](Get-LocaleFreshness.md)
 Gets the `ms.date` metadata information of a Docs article for every locale.
@@ -52,6 +52,9 @@ Overwrites the metadata frontmatter in a Markdown file.
 
 ### [Sort-Parameters](Sort-Parameters.md)
 Sorts the H3 parameter blocks of a cmdlet Markdown file.
+
+### [Test-YamlTOC](Test-YamlTOC.md)
+Validates that all entries in the TOC exist and that all files in the repository are in the TOC.
 
 ### [Update-Metadata](Update-Metadata.md)
 Updates or adds metadata to a Markdown file.
