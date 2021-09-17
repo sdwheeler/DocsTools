@@ -11,7 +11,7 @@ function Get-ContentWithoutHeader {
     $end = $doc.count
 
     if ($hasFrontmatter) {
-        $start = $hasFrontmatter[-1].LineNumber
+        $start = $hasFrontmatter[1].LineNumber
     }
     $doc[$start..$end]
 }

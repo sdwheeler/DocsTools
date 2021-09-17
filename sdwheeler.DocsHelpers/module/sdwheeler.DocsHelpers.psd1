@@ -40,10 +40,10 @@ docs.microsoft.com articles.
     PrivateData       = @{
         PSData = @{
             # Tags = @()
-            # LicenseUri = ''
-            # ProjectUri = ''
+            LicenseUri = 'https://github.com/sdwheeler/DocsTools/LICENSE'
+            ProjectUri = 'https://github.com/sdwheeler/DocsTools'
             # IconUri = ''
-            # ReleaseNotes = ''
+            ReleaseNotes = 'https://github.com/sdwheeler/DocsTools/CHANGELOG.md'
             # Prerelease = ''
             # RequireLicenseAcceptance = $false
             # ExternalModuleDependencies = @()
