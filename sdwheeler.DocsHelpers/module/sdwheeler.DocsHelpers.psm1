@@ -109,14 +109,14 @@ function Get-Metadata {
                     $value = $line.Substring($i + 1).replace('"', '')
                     switch ($key) {
                         'title' {
-
-                            $value = $value.split('|')[0].trim()
+                            $value = $value.split('|')[0].Trim()
                         }
                         'ms.date' {
-                            $value = Get-Date $value -Format 'MM/dd/yyyy'
+                            [datetime]$date = $value.Trim()
+                            $value = Get-Date $date -Format 'MM/dd/yyyy'
                         }
                         Default {
-                            $value = $value.trim()
+                            $value = $value.Trim()
                         }
                     }
 
