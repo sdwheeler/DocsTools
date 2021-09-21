@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.2 - 21-Sep-2021
+
+- Fixed bug in date conversion on systems using a non-US date format
+
 ## v1.0.2 - 17-Sep-2021
 
 - Fixed bug in `Get-ContentWithoutHeader` that miscalculated the end of the header
