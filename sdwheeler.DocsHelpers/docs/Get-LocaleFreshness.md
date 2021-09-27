@@ -7,22 +7,22 @@ schema: 2.0.0
 
 # Get-LocaleFreshness
 
-## SYNOPSIS
+## Synopsis
 Gets the `ms.date` metadata information of a Docs article for every locale.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-LocaleFreshness [[-Uri] <Uri>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Gets the `ms.date` metadata information of a Docs article for every locale. The output includes the
 locale information and the translation method. This is useful to see whether or not the localization
 process has picked up the latest changes made to the English version of the article.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get the freshness date for an article
 
@@ -62,7 +62,7 @@ tr-tr  tr-TR            MT                 08/02/2021
 zh-tw  zh-TW            MT                 08/02/2021
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Uri
 
@@ -87,14 +87,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

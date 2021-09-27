@@ -7,20 +7,20 @@ schema: 2.0.0
 
 # Get-Syntax
 
-## SYNOPSIS
+## Synopsis
 Displays the syntax of a cmdlet.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-Syntax [-CmdletName] <String> [-Markdown] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet is similar to the output you get from `Get-Command -Syntax`. By default, the syntax information is returned as an object. You can also return it as formatted Markdown source that can be easily pasted into a cmdlet Markdown file.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get the syntax of a command as Markdown text
 
@@ -68,7 +68,7 @@ Get-Command AllCommandSet        False [[-Name] <string[]>] [[-ArgumentList] <Ob
                                        [-UseAbbreviationExpansion] [<CommonParameters>]
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -CmdletName
 
@@ -110,14 +110,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

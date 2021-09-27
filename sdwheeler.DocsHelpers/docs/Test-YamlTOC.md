@@ -7,22 +7,22 @@ schema: 2.0.0
 
 # Test-YamlTOC
 
-## SYNOPSIS
+## Synopsis
 Validates that all entries in the TOC exist and that all files in the repository are in the TOC.
 
-## SYNTAX
+## Syntax
 
 ```
 Test-YamlTOC [-Path] <String> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet reads a `TOC.yml` file then verifies that every entry in the TOC exists in the
 repository. After that, the cmdlet enumerates every `.md` and `.yml` file in the repository and
 verifies that it exists in the TOC.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Verify a TOC file
 
@@ -47,7 +47,7 @@ File not in TOC - developer/scheduling-jobs-with-the-windows-powershell-api.md
 
 The cmdlet also found three files that need to be added to the TOC.
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -72,14 +72,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

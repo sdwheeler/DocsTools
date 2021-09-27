@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Get-HtmlMetaTags
 
-## SYNOPSIS
+## Synopsis
 Gets all of the HTML `<meta>` elements of a web page.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-HtmlMetaTags [[-ArticleUrl] <Uri>] [-ShowRequiredMetadata] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Gets all of the HTML `<meta>` elements of a web page. This is use to see the Docs metadata in the
 published article.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get the `ms.*` meta tags
 
@@ -64,7 +64,7 @@ ms.custom     :
 ROBOTS        : INDEX, FOLLOW
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -ArticleUrl
 
@@ -105,14 +105,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

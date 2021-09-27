@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # hash2yaml
 
-## SYNOPSIS
+## Synopsis
 Converts a hashtable containing metadata key-value pairs into YAML frontmatter.
 
-## SYNTAX
+## Syntax
 
 ```
 hash2yaml [[-MetaHash] <Hashtable>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The helper function converts a hashtable containing metadata key-value pairs into YAML frontmatter.
 The output is suitable for copying into the frontmatter of a Markdown file.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Convert metadata hashtable to YAML
 
@@ -42,7 +42,7 @@ title: Installing PowerShell on Windows
 ---
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -MetaHash
 
@@ -67,17 +67,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-Metadata](Get-Metadata.md)
 

@@ -7,16 +7,16 @@ schema: 2.0.0
 
 # Sort-Parameters
 
-## SYNOPSIS
+## Synopsis
 Sorts the H3 parameter blocks of a cmdlet Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Sort-Parameters [[-Path] <String[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The PowerShell-Docs style guide recommends that the H3 parameter blocks of a cmdlet Markdown file be
 sorted alphabetically with the **Confirm** and **WhatIf** parameters at the end of the list.
@@ -25,7 +25,7 @@ not all cmdlet files are ordered this way.
 
 This cmdlet allows you to easily reorder the parameters.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Sort the parameter blocks of all Markdown files in a folder
 
@@ -33,7 +33,7 @@ This cmdlet allows you to easily reorder the parameters.
 Sort-Parameters .\7.1\Microsoft.PowerShell.Utility\*-*.md
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -59,14 +59,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

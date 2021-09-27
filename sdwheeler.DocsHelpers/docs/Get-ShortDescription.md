@@ -7,16 +7,16 @@ schema: 2.0.0
 
 # Get-ShortDescription
 
-## SYNOPSIS
+## Synopsis
 Creates Markdown source listing each of cmdlet files in the folder and their **SYNOPSIS** text.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-ShortDescription
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet creates Markdown source listing each of cmdlet files in the folder and their **SYNOPSIS**
 text. This text is useful for updating the module Markdown file created by PlatyPS.
@@ -24,7 +24,7 @@ text. This text is useful for updating the module Markdown file created by Platy
 The cmdlet must be run in the folder containing the Markdown files for all the cmdlets in the
 module. The output can be sent to the clipboard for easy pasting into the `module.md` file.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get the short descriptions for all cmdlets
 
@@ -36,18 +36,18 @@ Get-ShortDescription | Set-Clipboard
 
 The output is copied to the Clipboard for easy pasting into the `module.md` file.
 
-## PARAMETERS
+## Parameters
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
 There are no parameter for this cmdlet.
 
-## RELATED LINKS
+## Related links

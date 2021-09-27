@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Get-YamlBlock
 
-## SYNOPSIS
+## Synopsis
 Gets the YAML frontmatter from a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-YamlBlock [[-Path] <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet returns the YAML frontmatter from a Markdown file. The output is returned as plain text
 and does not include the `---` document separator lines.
 
-## EXAMPLES
+## Examples
 
 ### Example 1
 
@@ -35,7 +35,7 @@ description: Information about installing PowerShell on Windows
 ms.date: 08/02/2021
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -60,17 +60,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-Metadata](Get-Metadata.md)
 

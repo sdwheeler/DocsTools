@@ -7,16 +7,16 @@ schema: 2.0.0
 
 # Get-MDLinks
 
-## SYNOPSIS
+## Synopsis
 Gets a list of the hyperlinks in the Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-MDLinks [[-Path] <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet returns a **PSObject** containing the Markdown link parsed into it's parts:
 
@@ -25,7 +25,7 @@ The cmdlet returns a **PSObject** containing the Markdown link parsed into it's 
 - **anchor** - contains the anchor string on the link
 - **query** - contains the query string on the link
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get a list of links in an article
 
@@ -113,7 +113,7 @@ anchor :
 query  :
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -139,14 +139,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

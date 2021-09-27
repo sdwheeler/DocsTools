@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Update-Metadata
 
-## SYNOPSIS
+## Synopsis
 Updates or adds metadata to a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Update-Metadata [[-Path] <String>] [[-NewMetadata] <Hashtable>] [-Recurse] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Updates or adds metadata to a Markdown file. The existing keys in the frontmatter are update with
 the new values. New keys are added to the frontmatter.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Update the **ms.date** metadata for all Markdown files
 
@@ -29,7 +29,7 @@ the new values. New keys are added to the frontmatter.
 Update-Metadata *.md -NewMetadata @{'ms.date' = Get-Date -Format 'MM/dd/yyyy' }
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -NewMetadata
 
@@ -88,17 +88,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-Metadata](Get-Metadata.md)
 

@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Set-Metadata
 
-## SYNOPSIS
+## Synopsis
 Overwrites the metadata frontmatter in a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Set-Metadata [[-Path] <String>] [[-NewMetadata] <Hashtable>] [-Recurse] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Overwrites the metadata frontmatter in a Markdown file. The existing frontmatter is replaced with
 the values in the **NewMetadata** hashtable.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Replace the existing metadata with new values
 
@@ -33,7 +33,7 @@ $newvalues = @{
 Update-Metadata .\docs\*.md -NewMetadata $newvalues
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -NewMetadata
 
@@ -92,17 +92,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-Metadata](Get-Metadata)
 

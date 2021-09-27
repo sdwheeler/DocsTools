@@ -7,22 +7,22 @@ schema: 2.0.0
 
 # New-LinkRefs
 
-## SYNOPSIS
+## Synopsis
 Creates Markdown link references for all links in a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 New-LinkRefs [[-path] <String[]>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet creates Markdown link references for all links in a Markdown file. These references are
 usually found at the end of the Markdown file. The output can be pasted in the the Markdown file.
 You then must edit the hyperlinks in the file to transform them into the reference-style syntax.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Create link references for an article
 
@@ -46,7 +46,7 @@ Get-MDLinks .\install\Installing-PowerShell-Core-on-Windows.md
 [Understanding how packaged desktop apps run on Windows]: /windows/msix/desktop/desktop-to-uwp-behind-the-scenes
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -72,14 +72,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links

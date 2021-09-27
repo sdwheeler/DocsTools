@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Get-ContentWithoutHeader
 
-## SYNOPSIS
+## Synopsis
 Gets the content of a Markdown file without the YAML frontmatter.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-ContentWithoutHeader [[-Path] <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 The cmdlet gets the content of a Markdown file without the YAML frontmatter. This is useful when
 updating the metadata of the file or for passing Markdown text to another command for processing.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Render the Markdown file as HTML
 
@@ -33,7 +33,7 @@ Get-ContentWithoutHeader .\Update-Metadata.md |
     Select-Object -ExpandProperty Html
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -Path
 
@@ -58,16 +58,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
 See the source code for `Update-Metadata` for another example.
 
-## RELATED LINKS
+## Related links

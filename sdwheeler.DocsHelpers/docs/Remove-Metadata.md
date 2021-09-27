@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Remove-Metadata
 
-## SYNOPSIS
+## Synopsis
 Removes metadata key-value pairs from the YAML frontmatter of a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Remove-Metadata [[-Path] <String>] [[-KeyName] <String[]>] [-Recurse] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Removes metadata key-value pairs from the YAML frontmatter of a Markdown file. List the keys names
 you want to remove from the frontmatter. This is useful for removing obsolete metadata values.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Remove obsolete metadata values
 
@@ -55,7 +55,7 @@ title                          Installing PowerShell on Windows
 ms.date                        08/02/2021
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -KeyName
 
@@ -114,17 +114,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-Metadata](Get-Metadata.md)
 

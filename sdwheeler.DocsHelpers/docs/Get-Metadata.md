@@ -7,21 +7,21 @@ schema: 2.0.0
 
 # Get-Metadata
 
-## SYNOPSIS
+## Synopsis
 Get the metadata frontmatter from a Markdown file.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-Metadata [[-Path] <String>] [-Recurse] [-AsObject] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
 Get the metadata frontmatter from a Markdown file. By default the data is returned as a
 **hashtable** object. It can also be returned as a **PSObject**.
 
-## EXAMPLES
+## Examples
 
 ### Example 1 - Get the metadata header as a hashtable
 
@@ -50,7 +50,7 @@ title       : Installing PowerShell on Windows
 ms.date     : 08/02/2021
 ```
 
-## PARAMETERS
+## Parameters
 
 ### -AsObject
 
@@ -110,17 +110,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### None
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
 [Get-YamlBlock](Get-YamlBlock.md)
 
