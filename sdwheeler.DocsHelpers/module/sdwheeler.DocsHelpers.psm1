@@ -176,6 +176,8 @@ function Get-Syntax {
                     $x++
                 }
                 $parameters += , $p
+            } else {
+                $parameters += , $p
             }
         }
 
