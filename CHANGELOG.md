@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## v1.0.2 - 21-Sep-2021
+## v1.0.4 - 12-Oct-2021
+
+- Fixed bug in `Get-Syntax` markdown output missing last parameter
+
+## v1.0.3 - 21-Sep-2021
 
 - Fixed bug in date conversion on systems using a non-US date format
 
