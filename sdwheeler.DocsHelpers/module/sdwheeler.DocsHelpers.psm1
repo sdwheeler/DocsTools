@@ -206,7 +206,7 @@ function Get-Syntax {
         }
 
         $syntax = (Get-Command $name).ParameterSets |
-            Select-Object -Property @{n = 'Cmdlet'; e = { $name } },
+            Select-Object -Property @{n = 'Cmdlet'; e = { $cmdlet.Name } },
             @{n = 'ParameterSetName'; e = { $_.name } },
             IsDefault,
             @{n = 'Parameters'; e = { $_.ToString() } }

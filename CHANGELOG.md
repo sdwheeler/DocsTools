@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.5 - 17-Nov-2021
+
+- Updated `Get-Syntax` to handle script files
+
 ## v1.0.4 - 12-Oct-2021
 
 - Fixed bug in `Get-Syntax` markdown output missing last parameter
