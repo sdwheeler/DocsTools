@@ -199,9 +199,14 @@ function Get-Syntax {
     try {
         $cmdlet = Get-Command $cmdletname -ea Stop
         if ($cmdlet.CommandType -eq 'Alias') { $cmdlet = Get-Command $cmdlet.Definition }
+        if ($cmdlet.CommandType -eq 'ExternalScript') {
+            $name = $CmdletName
+        } else {
+            $name = $cmdlet.Name
+        }
 
-        $syntax = (Get-Command $cmdlet.name).ParameterSets |
-            Select-Object -Property @{n = 'Cmdlet'; e = { $cmdlet.name } },
+        $syntax = (Get-Command $name).ParameterSets |
+            Select-Object -Property @{n = 'Cmdlet'; e = { $name } },
             @{n = 'ParameterSetName'; e = { $_.name } },
             IsDefault,
             @{n = 'Parameters'; e = { $_.ToString() } }
